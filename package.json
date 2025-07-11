@@ -7,16 +7,27 @@
     "codeweaver": "./bin/codeweaver.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
-  "keywords": ["cli", "code-analysis", "ast", "fullstack", "typescript", "integration", "tracing"],
+  "keywords": [
+    "cli",
+    "code-analysis",
+    "ast",
+    "fullstack",
+    "typescript",
+    "integration",
+    "tracing"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
     "@babel/parser": "^7.28.0",
     "@babel/traverse": "^7.28.0",
-    "chalk": "^5.4.1",
+    "chalk": "^4.1.2",
     "commander": "^14.0.0",
-    "globby": "^14.1.0"
+    "globby": "^11.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.0.4"
   }
 }

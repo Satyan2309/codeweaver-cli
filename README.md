@@ -102,7 +102,7 @@ Feature	Command
 
 
 ## 👨‍💻 Author
-Built with ❤️ by Satyan Sinha
+Built with by Satyan Sinha
 GitHub: https://github.com/Satyan2309/codeweaver-cli
 
 # ⭐ Star the Repo

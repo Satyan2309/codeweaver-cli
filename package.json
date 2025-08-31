@@ -1,6 +1,6 @@
 {
   "name": "codeweaver-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A full-stack static code analysis and integration mapping CLI tool",
   "main": "bin/codeweaver.js",
   "types": "",

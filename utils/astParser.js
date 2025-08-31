@@ -1,5 +1,7 @@
 import parser from '@babel/parser';
-import traverse from '@babel/traverse';
+import traverseModule from '@babel/traverse';
+
+const traverse = traverseModule.default || traverseModule;
 
 /**
  * Parse code and extract all variable names (supports JS, TS, JSX)
@@ -20,12 +22,10 @@ export function extractVariables(code) {
         if (decl.id?.type === 'Identifier') {
           variables.push(decl.id.name);
         } else if (decl.id?.type === 'ObjectPattern') {
-          // Destructuring { a, b }
           decl.id.properties.forEach(prop => {
             if (prop.key?.name) variables.push(prop.key.name);
           });
         } else if (decl.id?.type === 'ArrayPattern') {
-          // Destructuring [a, b]
           decl.id.elements.forEach(el => {
             if (el?.name) variables.push(el.name);
           });

@@ -1,10 +1,11 @@
 {
   "name": "codeweaver-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A full-stack static code analysis and integration mapping CLI tool",
   "main": "bin/codeweaver.js",
+  "types": "",
   "bin": {
-    "codeweaver": "./bin/codeweaver.js"
+    "codeweaver": "bin/codeweaver.js"
   },
   "scripts": {
     "test": "jest"
@@ -18,8 +19,21 @@
     "integration",
     "tracing"
   ],
-  "author": "Your Name",
+  "author": "Satyan Sinha",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Satyan2309/codeweaver-cli.git"
+  },
+  "type": "module",
+  "files": [
+    "bin",
+    "lib",
+    "utils",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "dependencies": {
     "@babel/parser": "^7.28.0",
     "@babel/traverse": "^7.28.0",
@@ -29,5 +43,11 @@
   },
   "devDependencies": {
     "jest": "^30.0.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./bin/codeweaver.js",
+      "import": "./bin/codeweaver.js"
+    }
   }
 }

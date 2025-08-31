@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 
+// ✅ ESM shim for require (for legacy CommonJS modules)
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
 const { program } = require('commander');
-const { scanProject } = require('../lib/scanner');
-const { mapConnections } = require('../lib/mapper');
-const { traceVariable } = require('../lib/tracer');
-const { analyzeContracts } = require('../lib/analyzer');
-const { visualizeConnections } = require('../lib/visualizer');
-const { suggestImprovements } = require('../lib/suggester');
-const { generateDocs } = require('../lib/docsGenerator');
+const { scanProject } = require('../lib/scanner.js');
+const { mapConnections } = require('../lib/mapper.js');
+const { traceVariable } = require('../lib/tracer.js');
+const { analyzeContracts } = require('../lib/analyzer.js');
+const { visualizeConnections } = require('../lib/visualizer.js');
+const { suggestImprovements } = require('../lib/suggester.js');
+const { generateDocs } = require('../lib/docsGenerator.js');
 
 program
   .command('scan')
